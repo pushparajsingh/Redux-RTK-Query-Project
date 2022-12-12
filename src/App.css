@@ -1,3 +1,6 @@
+* {
+  margin: 0px;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,43 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header {
+  width: 100wh;
+  height: 100px;
+  background: linear-gradient(to right, red, yellow);
+  position: sticky;
+  top: 0px;
+}
+.text {
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+  padding-top: 20px;
+}
+.body {
+  width: 100%;
+  background: yellowgreen;
+  padding-top: 20px;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+}
+
+.center tr th,
+.center tr td {
+  border: 2px solid black;
+}
+.inputText {
+  border-radius: 25px;
+
+  padding: 8px;
+}
+.marginTop {
+  margin-top: -50px;
+  margin-left: auto;
+  width: 450px;
 }
