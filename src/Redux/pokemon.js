@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // Define a service using a base URL and expected endpoints
 export const pokemonApi = createApi({
   reducerPath: "pokemonApi",
-  tagTypes: ["postlist"],
+  tagTypes: ["postlist"],  // all given name function are here
   baseQuery: fetchBaseQuery({
     baseUrl: "https://629dae743dda090f3c07dd7f.mockapi.io",
   }),
@@ -12,12 +12,12 @@ export const pokemonApi = createApi({
     getPokemonByName: builder.query({
       //here builder.mutation for delete,update operation
       query: (name) => ({ url: "/fakeapi" }),
-      providesTags: ["postlist"],
+      providesTags: ["postlist"], //give name to this function
     }),
     deletePost: builder.mutation({
       //here builder.mutation for delete,update operation
       query: (id) => ({ url: `/fakeapi/${id}`, method: "DELETE" }),
-      invalidatesTags: ["postlist"],
+      invalidatesTags: ["postlist"], //execute getPokemonByName
     }),
     editPost: builder.mutation({
       //here builder.mutation for delete,update operation
